@@ -1,0 +1,16 @@
+.outer-item::before{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+
+.outer-item:nth-child(1)::before{
+    background-image: url("../images/location.png");
+}
+
+.outer-item:nth-child(2)::before{
+    background-image: url("../images/phone.svg");
+}

@@ -1,0 +1,24 @@
+.cta{
+    margin-bottom: 69px;
+}
+
+.cta-inner{
+    max-width: 545px;
+    margin-bottom: 41px;
+}
+
+.cta-title{
+    margin-bottom: 13px;
+}
+
+@media screen and (min-width:992px){
+    .cta{
+        margin-bottom: 148px;
+    }
+    .cta-inner{
+        margin-bottom: 74px;
+    }
+    .cta-title{
+        margin-bottom: 2rem;
+    }
+}

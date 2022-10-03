@@ -1,0 +1,44 @@
+$custom-spacing:(
+    outer_list:8px,
+    button:11px 28px,
+    header:15px 13px
+);
+
+$custom-colors:(
+    dark:(
+        100:"#1a1a1a",
+        200:"#222222",
+        300:#1B1B1B
+    ),
+    custom-primary:(
+        100:#DC7000
+    ),
+    neutral:(
+        100:#525252,
+        200:#515151
+    ),
+    main:(
+        100:#E5E5E5
+    ),
+    greenish:(
+        100:rgba(12, 190, 100, 0.15),
+        200:#0CBE64
+    ),
+    redish:(
+        100:rgba(220, 0, 0, 0.1),
+        200:#DC0000
+    ),
+    custom_purple:(
+        100:rgba(176, 0, 220, 0.11),
+        200:#B000DC
+    ),
+    sky:(
+        100:rgba(0, 88, 220, 0.09),
+        200:#0058DC
+    )
+);
+
+$custom-leadings:(
+    100:15px,
+    200:24px
+);

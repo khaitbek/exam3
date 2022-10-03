@@ -1,0 +1,32 @@
+.projects{
+    padding-top: 60px;
+    padding-bottom: 103px;
+}
+
+.projects-inner{
+    max-width: 497px;
+    margin-inline: auto;
+}
+
+
+@media screen and (min-width:992px){
+    .projects{
+        padding-top: 141px;
+        padding-bottom: 99px;
+    }
+    .projects-inner{
+        margin-bottom: 71px !important;
+    }
+    .projects-title{
+        margin-bottom: 18px !important;
+    }
+    .projects img{
+        width: 100% !important;
+        height: 201px !important;
+    }
+    @for $i from 1 through 3{
+        .projects-item:nth-child(#{$i}){
+            margin-bottom: 33px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.site-footer{
+    padding-block: 22px 27px;
+    padding-inline: 54px;
+}
+
+.footer-start-inner{
+    max-width: 372px;
+}
+
+.footer-logo{
+    margin-bottom: 20px;
+}
+.footer-top-text{
+    margin-bottom: 25px;
+}
+.footer-top-link{
+    justify-self: end;
+}
+
+.footer-strong{
+    line-height: 26px;
+}
+
+.footer-outer{
+    max-width: 282px;
+}
+
+.footer-outer-text{
+    margin-bottom: 11px;
+    line-height: 24px;
+}
+
+@media screen and (min-width:768px){
+    .footer-start{
+        padding-bottom: 53px;
+        border-bottom: 0.8px solid #D2D2D2;
+    }
+    .footer-end{
+        padding-top: 29px;
+    }
+}
+
+.copyright-text{
+    font-size: 12px;
+}

@@ -1,0 +1,28 @@
+@use "./variables";
+
+@each $item,$space in variables.$custom-spacing{
+    .spacing-#{$item}{
+        padding: #{$space};
+    }
+}
+
+@each $item,$space in variables.$custom-leadings{
+    .leading-#{$item}{
+        line-height: #{$space};
+    }
+}
+
+@each $shade,$item in variables.$custom-colors{
+    @each $level,$color in $item{
+        .clr-#{$shade}-#{$level}{
+            color: #{$color} !important;
+        }
+        .bg-#{$shade}-#{$level}{
+            background-color: #{$color} !important;
+        }
+    }
+}
+
+.fw-medium{
+    font-weight: 500;
+}

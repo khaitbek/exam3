@@ -1,0 +1,41 @@
+.spacing-outer_list {
+  padding: 8px;
+}
+
+.spacing-button {
+  padding: 11px 28px;
+}
+
+.spacing-header {
+  padding: 15px 13px;
+}
+
+.leading-100 {
+  line-height: 15px;
+}
+
+.leading-200 {
+  line-height: 24px;
+}
+
+.clr-dark-100 {
+  color: #1a1a1a !important;
+}
+
+.bg-dark-100 {
+  background-color: #1a1a1a !important;
+}
+
+.clr-custom-primary-100 {
+  color: #DC7000 !important;
+}
+
+.bg-custom-primary-100 {
+  background-color: #DC7000 !important;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=main.css.map */

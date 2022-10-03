@@ -33,8 +33,8 @@ module.exports = {
                 loader: "html-loader"
             },
             {
-                test: /\.(jpe?g|png|gif|svg|webp)$/i,
-                type: "asset"
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource"
             },
             {
                 test:/\.css$/,
@@ -47,16 +47,13 @@ module.exports = {
             minify: true,
             filename: "index.html",
             template: path.resolve(__dirname, "src/views/index.html")
-        }),
-        new CopyPlugin({
-            patterns: [
-                { from: __dirname + "/src/views", to: __dirname + "/dist" }
-            ]
         })
     ],
     devtool: "inline-source-map",
     devServer: {
-        static: "./dist"
+        static: "./dist",
+        compress:true,
+        port:1234
     },
     resolve: {
         extensions: [".js", ".html", ".scss"]

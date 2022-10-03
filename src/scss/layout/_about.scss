@@ -1,0 +1,47 @@
+.about{
+    padding-bottom: 344px;
+    background-image: url("../images/about-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom 50px center;
+}
+
+.about-inner{
+    max-width: 470px;
+}
+
+.about-title{
+    margin-bottom: 34px;
+}
+
+.about-text{
+    margin-bottom: 18px;
+}
+
+.about-text-secondary{
+    margin-bottom: 46px;
+}
+
+.about-btn{
+    padding: 13px 45px !important;
+}
+
+@media screen and (min-width:992px){
+    .about{
+        margin-bottom: 138px;
+        background-position: calc(50% - 250px);
+        background-size: 350px 400px;
+    }
+    .about-title{
+        margin-bottom: 22px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .about{
+        background-position: calc(50% - 400px);
+        background-size: contain;
+    }
+    .about-title{
+        font-size: 43px;
+    }
+}

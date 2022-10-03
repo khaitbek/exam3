@@ -1,5 +1,25 @@
-$bg:indigo;
+@use "../scss/base/variables";
+@use "../scss/base/utilities";
+@use "./layout/layout";
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 body{
-    background-color: $bg;
+    font-family: "Poppins",sans-serif !important;
 }
+
+@media screen and (min-width:768px){
+    .navigation.position-fixed{
+        position: static !important;
+    }
+    .navigation.translate-middle-x{
+        transform: none !important;
+    }
+    .navigation.bg-custom-primary-100{
+        background-color: transparent !important;
+    }
+}
+
+.outer-item:nth-child(1){
+    margin-right: 100px;
+}
+@import "bootstrap/scss/bootstrap";
