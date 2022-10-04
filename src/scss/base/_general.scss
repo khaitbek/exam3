@@ -1,3 +1,10 @@
 body[no-scroll]{
     overflow: hidden !important;
 }
+
+.custom-container{
+    width: 100%;
+    max-width: 1350px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
