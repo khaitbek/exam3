@@ -27,7 +27,6 @@ header{
 }
 
 .navigation{
-    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -40,7 +39,20 @@ header{
  animation: fadeOut 0.5s ease-in-out forwards;
 }
 
+.nav-item:nth-child(1)::before{
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
 @keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
     100%{
         opacity: 1;
     }
