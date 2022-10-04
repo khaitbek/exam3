@@ -7,7 +7,7 @@
 }
 
 .hero-content {
-    max-width: 527px;
+    max-width: 327px;
 }
 
 .digital-text {
@@ -28,6 +28,12 @@
     padding: 13px 18px 11px 22px;
     border-radius: 40px !important;
     background: linear-gradient(92.48deg, #FA8305 2.08%, #FB9E3C 117.25%);
+}
+
+@media screen and (min-width:768px){
+    .hero-content {
+        max-width: 527px;
+    }
 }
 
 @media screen and (min-width:1024px) {

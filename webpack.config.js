@@ -23,10 +23,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ["style-loader",
-                "css-loader",
-                "postcss-loader",
-                "sass-loader"
-            ]
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.html$/,
@@ -34,11 +34,30 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource"
+                // type: "asset/resource"
+                use: [
+                    {
+                        loader: ImageMinimizerPlugin.loader,
+                        // enforce: "pre",
+                        options: {
+                            minimizer: {
+                                implementation: ImageMinimizerPlugin.imageminMinify,
+                                options: {
+                                    plugins: [
+                                        "imagemin-gifsicle",
+                                        "imagemin-mozjpeg",
+                                        "imagemin-pngquant",
+                                        "imagemin-svgo",
+                                    ],
+                                },
+                            },
+                        },
+                    },
+                ]
             },
             {
-                test:/\.css$/,
-                use:["style-loader","css-loader","postcss-loader"]
+                test: /\.css$/,
+                use: ["style-loader", "css-loader", "postcss-loader"]
             }
         ]
     },
@@ -52,53 +71,53 @@ module.exports = {
     devtool: "inline-source-map",
     devServer: {
         static: "./dist",
-        compress:true,
-        port:1234
+        compress: true,
+        port: 1234
     },
     resolve: {
         extensions: [".js", ".html", ".scss"]
     },
-    optimization: {
-        runtimeChunk: "single",
-        minimizer: [
-            "...",
-            new ImageMinimizerPlugin({
-                minimizer: {
-                    implementation: ImageMinimizerPlugin.imageminMinify,
-                    options: {
-                        // Lossless optimization with custom option
-                        // Feel free to experiment with options for better result for you
-                        plugins: [
-                            ["imagemin-gifsicle", { interlaced: true }],
-                            ["imagemin-jpegtran", { progressive: true }],
-                            ["imagemin-optipng", { optimizationLevel: 5 }],
-                            // Svgo configuration here https://github.com/svg/svgo#configuration
-                            [
-                                "imagemin-svgo",
-                                {
-                                    plugins: [
-                                        {
-                                            name: "preset-default",
-                                            params: {
-                                                overrides: {
-                                                    removeViewBox: false,
-                                                    addAttributesToSVGElement: {
-                                                        params: {
-                                                            attributes: [
-                                                                { xmlns: "http://www.w3.org/2000/svg" },
-                                                            ],
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    ],
-                                },
-                            ],
-                        ],
-                    },
-                },
-            }),
-        ],
-    }
+    // optimization: {
+    //     runtimeChunk: "single",
+    //     minimizer: [
+    //         "...",
+    //         new ImageMinimizerPlugin({
+    //             minimizer: {
+    //                 implementation: ImageMinimizerPlugin.imageminMinify,
+    //                 options: {
+    //                     // Lossless optimization with custom option
+    //                     // Feel free to experiment with options for better result for you
+    //                     plugins: [
+    //                         ["gifsicle", { interlaced: true }],
+    //                         ["jpegtran", { progressive: true }],
+    //                         ["optipng", { optimizationLevel: 5 }],
+    //                         // Svgo configuration here https://github.com/svg/svgo#configuration
+    //                         [
+    //                             "svgo",
+    //                             {
+    //                                 plugins: [
+    //                                     {
+    //                                         name: "preset-default",
+    //                                         params: {
+    //                                             overrides: {
+    //                                                 removeViewBox: false,
+    //                                                 addAttributesToSVGElement: {
+    //                                                     params: {
+    //                                                         attributes: [
+    //                                                             { xmlns: "http://www.w3.org/2000/svg" },
+    //                                                         ],
+    //                                                     },
+    //                                                 },
+    //                                             },
+    //                                         },
+    //                                     },
+    //                                 ],
+    //                             },
+    //                         ],
+    //                     ],
+    //                 },
+    //             },
+    //         }),
+    //     ],
+    // }
 }
