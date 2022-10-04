@@ -21,6 +21,15 @@
     width: 100% !important;
 }
 
+.site-article{
+    padding-block: 30px 18px;
+    padding-inline: 21px 32px;
+}
+
+.article-inner{
+    margin-bottom: 43px;
+}
+
 @media screen and (min-width:992px){
     .cta{
         margin-bottom: 148px;
@@ -32,8 +41,14 @@
         margin-bottom: 2rem;
     }
 
+    .site-article{
+        padding-block: 42px 40px;
+        padding-inline: 56px 50px;
+    }
+
    .article-inner{
     max-width: 636px;
+    margin-bottom: 0;
    }
 }
 
