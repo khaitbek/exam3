@@ -2,7 +2,15 @@ const hamburgerBtn = document.querySelector(".hamburger")
 const primaryNav = document.querySelector("#primaryNavigation")
 hamburgerBtn.addEventListener("click",()=>{
     hamburgerBtn.classList.toggle("toggle")
-    primaryNav.classList.toggle("show")
+    document.body.toggleAttribute("no-scroll")
+    if(primaryNav.classList.contains("show")){
+      primaryNav.classList.add("closing")
+      primaryNav.addEventListener("animationend",()=>{
+        primaryNav.classList.remove("show","closing")
+      },{once:true})
+    }else{
+      primaryNav.classList.add("show")
+    }
 })
 
 $("#carouselItems").slick({

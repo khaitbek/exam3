@@ -11,6 +11,16 @@
     margin-bottom: 13px;
 }
 
+.form-btn{
+    top: 6px;
+    right: 7px;
+    padding: 8px 14px 9px 22px !important;
+}
+
+#userEmail{
+    width: 100% !important;
+}
+
 @media screen and (min-width:992px){
     .cta{
         margin-bottom: 148px;
@@ -21,4 +31,9 @@
     .cta-title{
         margin-bottom: 2rem;
     }
+
+   .article-inner{
+    max-width: 636px;
+   }
 }
+

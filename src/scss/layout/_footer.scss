@@ -4,7 +4,7 @@
 }
 
 .footer-start-inner{
-    max-width: 372px;
+    max-width: 280px;
 }
 
 .footer-logo{
@@ -37,6 +37,14 @@
     }
     .footer-end{
         padding-top: 29px;
+    }
+    
+    
+}
+
+@media screen and (min-width:992px){
+    .footer-outer{
+        max-width: 200px;
     }
 }
 

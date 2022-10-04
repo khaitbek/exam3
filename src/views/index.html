@@ -15,10 +15,10 @@
 
 <body>
     <!-- site outer links -->
-    <div class="outer-wrapper spacing-outer_list">
+    <div class="outer-wrapper d-none d-lg-block spacing-outer_list">
         <div class="container">
             <ul
-                class="outer-list d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-end list-unstyled">
+                class="outer-list d-flex flex-column flex-sm-row align-items-sm-center justify-content-sm-end mb-0 list-unstyled">
                 <li class="outer-item d-flex align-items-center mb-3 mb-sm-0">
                     <a class="outer-link leading-100 text-decoration-none clr-dark-100 hover-none" href="#">
                         Company Address type here
@@ -43,10 +43,9 @@
                 </a>
 
                 <!-- hamburger -->
-                <div class="hamburger position-relative d-grid gap-1 d-md-none">
-                    <span class="line bg-white" aria-hidden="true"></span><span class="line bg-white"
-                        aria-hidden="true"></span><span class="line bg-white" aria-hidden="true"></span>
-                </div>
+                <button class="btn hamburger position-relative d-md-none">
+                    <img src="../images/hamburger.svg" aria-hidden="true" alt="hamburger icon">
+                </button>
                 <!-- navigation -->
                 <nav class="navigation position-fixed top-0 start-50 w-50 d-none py-3 bg-custom-primary-100 translate-middle-x d-md-block transform-md-none py-md-0 bg-md-transparent"
                     id="primaryNavigation">
@@ -105,7 +104,7 @@
                     industry's standard dummy text ever since the 1500s,
                 </p>
             </div>
-            <img class="features-img" src="../images/features-desktop.jpg" width="334" height="212"
+            <img class="features-img" src="../images/features-desktop.jpg" width="334" height="212" srcset="../images/features-desktop.jpg 1x , ../images/features-desktop@2x.jpg 2x"
                 alt="A perfect picture of a perfect team working in a perfect office which is placed in a perfect location with a perfect scenery">
             <div class="features-end text-center">
                 <h3 class="features-title features-end-title mb-lg-4">Lorem Ipsum is simply dummy text of the printing
@@ -335,7 +334,7 @@
             </div>
 
             <article class="site-article bg-dark-300 px-3 py-3 rounded-4">
-                <div class="article-wrapper grid gap-5 d-md-flex align-items-md-center">
+                <div class="article-wrapper grid gap-5 d-xl-flex justify-content-xl-between align-items-xl-center">
                     <div class="article-inner">
                         <h3 class="article-text text-white">
                             Stay in the loop
@@ -346,11 +345,11 @@
                         </p>
                     </div>
 
-                    <form action="https://echo.htmlacademy.ru/courses">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    <form class="position-relative" action="https://echo.htmlacademy.ru/courses">
+                        <div class="d-flex mb-3">
+                            <input class="form-control p-3" id="userEmail" type="email"  placeholder="Enter email address"
+                                aria-label="User email">
+                            <button class="btn form-btn position-absolute bg-custom-primary-100 text-white text-center" type="submit">Continue</button>
                         </div>
 
                     </form>
@@ -365,7 +364,7 @@
     <footer class="site-footer bg-dark">
         <div class="container">
             <!-- footer top -->
-            <div class="footer-start d-none align-items-start justify-content-between d-md-flex">
+            <div class="footer-start d-none align-items-start justify-content-md-center justify-content-lg-between text-md-center text-lg-start d-md-grid gap-md-2 d-lg-flex">
                 <div class="footer-start-inner d-none d-md-flex h-100 flex-column justify-content-between">
                     <a class="footer-logo" href="#">
                         <img src="../images/logo.svg" alt="Logo">
@@ -376,7 +375,7 @@
                     <a class="footer-top-link text-white text-decoration-none" href="#">@Company.com</a>
                 </div>
 
-                <div class="d-none d-lg-block">
+                <div class="d-none d-md-block">
                     <strong class="footer-strong mb-3 text-white text-center fw-medium">
                         About us
                     </strong>
@@ -403,7 +402,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="d-none d-xl-block footer-outer">
+                <div class="d-none d-md-block footer-outer">
                     <strong class="text-white fw-medium">
                         Contact us
                     </strong>
@@ -415,7 +414,7 @@
                     </a>
                 </div>
                 <!-- social links -->
-                <ul class="list-unstyled d-flex align-self-end gap-3 mb-0">
+                <ul class="list-unstyled d-flex align-self-end justify-content-md-center justify-content-lg-start gap-3 mb-0">
                     <li>
                         <a href="#" target="blank">
                             <img src="../images/fb.svg" width="32" height="32" aria-hidden="true" alt="facebook logo">

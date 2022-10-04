@@ -2,6 +2,10 @@ header{
     background: linear-gradient(90.05deg, #E47500 -5.66%, #DF7C14 115.63%);
 }
 
+.outer-list{
+    padding-block: 8px;
+}
+
 .line{
     width: 30px;
     height: 3px;
@@ -22,7 +26,31 @@ header{
     transform: rotate(-135deg);
 }
 
-.navigation.show{
-    display: block !important;
+.navigation{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
+.navigation.show{
+    display: block !important;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.navigation.closing{
+ animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

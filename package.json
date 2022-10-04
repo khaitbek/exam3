@@ -42,6 +42,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "run-all": "^1.0.1"
+    "run-all": "^1.0.1",
+    "svgo": "^2.8.0"
   }
 }

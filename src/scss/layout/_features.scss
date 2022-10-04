@@ -47,6 +47,11 @@
     max-width: 200px !important;
 }
 
+.features-img{
+    position: relative;
+    right: 12%;
+}
+
 @for $i from 1 through 6{
     .features-item:nth-child(#{$i})::before{
         background-image: url("../images/features-#{$i}.svg");
@@ -60,6 +65,12 @@
     aspect-ratio: 1;
     margin-inline: auto;
     margin-bottom: 30px;
+}
+
+@media screen and (min-width:576px){
+    .features-img{
+        right: 0;
+    }
 }
 
 @media screen and (min-width:768px){
